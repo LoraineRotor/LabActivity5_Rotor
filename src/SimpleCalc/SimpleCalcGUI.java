@@ -25,24 +25,27 @@ public class SimpleCalcGUI extends JFrame{
     }
     public SimpleCalcGUI(){
         btnCompute.addActionListener(e -> {
+            try {
+                int num1, num2, cons;
 
-            int num1, num2, cons;
+                num1 = Integer.parseInt(tfNumber1.getText());
+                num2 = Integer.parseInt(tfNumber2.getText());
 
-            num1 = Integer.parseInt(tfNumber1.getText());
-            num2 = Integer.parseInt(tfNumber2.getText());
-
-            if (cbOperations.getSelectedItem().equals("+")) {
-                cons = (Integer.parseInt(tfNumber1.getText()) + Integer.parseInt(tfNumber2.getText()));
-                lblResult.setText(Integer.toString(cons));
-            } else if (cbOperations.getSelectedItem().equals("-")) {
-                cons = (Integer.parseInt(tfNumber1.getText()) - Integer.parseInt(tfNumber2.getText()));
-                lblResult.setText(Integer.toString(cons));
-            } else if (cbOperations.getSelectedItem().equals("*")) {
-                cons = (Integer.parseInt(tfNumber1.getText()) * Integer.parseInt(tfNumber2.getText()));
-                lblResult.setText(Integer.toString(cons));
-            } else if (cbOperations.getSelectedItem().equals("/")) {
-                cons = (Integer.parseInt(tfNumber1.getText()) / Integer.parseInt(tfNumber2.getText()));
-                lblResult.setText(Integer.toString(cons));
+                if (cbOperations.getSelectedItem().equals("+")) {
+                    cons = (Integer.parseInt(tfNumber1.getText()) + Integer.parseInt(tfNumber2.getText()));
+                    lblResult.setText(Integer.toString(cons));
+                } else if (cbOperations.getSelectedItem().equals("-")) {
+                    cons = (Integer.parseInt(tfNumber1.getText()) - Integer.parseInt(tfNumber2.getText()));
+                    lblResult.setText(Integer.toString(cons));
+                } else if (cbOperations.getSelectedItem().equals("*")) {
+                    cons = (Integer.parseInt(tfNumber1.getText()) * Integer.parseInt(tfNumber2.getText()));
+                    lblResult.setText(Integer.toString(cons));
+                } else if (cbOperations.getSelectedItem().equals("/")) {
+                    cons = (Integer.parseInt(tfNumber1.getText()) / Integer.parseInt(tfNumber2.getText()));
+                    lblResult.setText(Integer.toString(cons));
+                }
+            }catch (Exception x){
+                JOptionPane.showMessageDialog(null, "Input a number");
             }
 
 
