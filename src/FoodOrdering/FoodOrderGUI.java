@@ -26,11 +26,7 @@ public class FoodOrderGUI extends JFrame{
         app.setTitle("Food Ordering System");
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    public FoodOrderGUI(){
-        btnOrder.addActionListener(new ActionListener() {
 
-        });
-    }
 }
 
 
