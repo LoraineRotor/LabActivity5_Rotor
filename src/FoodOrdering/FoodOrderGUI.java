@@ -27,7 +27,7 @@ public class FoodOrderGUI extends JFrame{
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
     public FoodOrderGUI(){
-        btnOrder.addActionListener(new ActionListener(){
+        btnOrder.addActionListener(new ActionListener() {
 
         });
     }
