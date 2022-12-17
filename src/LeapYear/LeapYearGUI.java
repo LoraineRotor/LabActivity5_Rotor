@@ -23,7 +23,7 @@ public class LeapYearGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent a){
 
-
+            try{
                     int year;
                     year = Integer.parseInt(tfYear.getText());
 
@@ -36,7 +36,9 @@ public class LeapYearGUI extends JFrame{
                     } else {
                         JOptionPane.showMessageDialog(btnCheckYear, "Not a leap year");
                     }
-            }
+            } catch (Exception x){
+                JOptionPane.showMessageDialog(null, "Input a year");
+            }}
         });
     }
 }
